@@ -23,6 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/polish.css" />
   </head>
   <body>
     <div class="cursor-fx" aria-hidden="true">
@@ -43,7 +44,10 @@
 
     <header class="site-header" id="top">
       <div class="header-inner">
-        <a class="brand-mini" href="#top">garimpo maternidade</a>
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="/assets/logo.png" alt="" width="36" height="36" decoding="async" />
+          <span>garimpo maternidade</span>
+        </a>
         <nav class="nav" aria-label="Principal">
           <a href="#sobre">Sobre</a>
           <a href="#categorias">Produtos</a>
@@ -79,6 +83,7 @@
           />
         </div>
         <h1 id="hero-title" class="sr-only">Garimpo Maternidade</h1>
+        <div class="hero-body reveal">
         <p class="tagline">
           O <strong>achadinho</strong> feito só pra quem vive a jornada da
           <strong>maternidade</strong>
@@ -96,11 +101,17 @@
           </a>
           <a class="cta cta-ghost" href="#categorias">Ver categorias</a>
         </div>
-        <ul class="hero-stats" aria-label="Destaques">
-          <li><strong>100%</strong><span>Maternidade</span></li>
-          <li><strong>24h</strong><span>Achadinhos</span></li>
-          <li><strong>$$</strong><span>Economia</span></li>
+        </div>
+        <ul class="hero-stats reveal" aria-label="Destaques">
+          <li><span class="stat-icon" aria-hidden="true">👶</span><strong>100%</strong><span>Maternidade</span></li>
+          <li><span class="stat-icon" aria-hidden="true">✨</span><strong>24h</strong><span>Achadinhos</span></li>
+          <li><span class="stat-icon" aria-hidden="true">💰</span><strong>-50%</strong><span>Economia</span></li>
         </ul>
+        <div class="trust-strip reveal" aria-label="Diferenciais">
+          <span>✓ Só maternidade</span>
+          <span>✓ Links verificados</span>
+          <span>✓ Grátis no WhatsApp</span>
+        </div>
       </section>
 
       <div class="wave-divider" aria-hidden="true">
@@ -110,6 +121,7 @@
       </div>
 
       <section class="panel about" id="sobre" aria-labelledby="about-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Sobre o achadinho</span>
           <h2 id="about-title">Um garimpo só seu, de mãe pra mãe</h2>
@@ -136,9 +148,11 @@
             <p>Promo relâmpago, estoque acabando e cupom limitado — você vê e garimpa na hora.</p>
           </article>
         </div>
+        </div>
       </section>
 
       <section class="panel benefits" id="beneficios" aria-labelledby="benefits-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Por que entrar</span>
           <h2 id="benefits-title">Você economiza sem perder a cabeça</h2>
@@ -173,9 +187,11 @@
             </div>
           </li>
         </ul>
+        </div>
       </section>
 
       <section class="panel categories" id="categorias" aria-labelledby="cats-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Catálogo do garimpo</span>
           <h2 id="cats-title">Todo tipo de produto de maternidade</h2>
@@ -229,9 +245,11 @@
             <p>Promoções que somem em minutos — ative as notificações do grupo!</p>
           </li>
         </ul>
+        </div>
       </section>
 
       <section class="panel deals" aria-labelledby="deals-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Exemplos do grupo</span>
           <h2 id="deals-title">Assim chegam os achadinhos</h2>
@@ -260,9 +278,11 @@
             <span class="deal-note">Parcelado sem juros</span>
           </article>
         </div>
+        </div>
       </section>
 
       <section class="panel how" id="como" aria-labelledby="how-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Passo a passo</span>
           <h2 id="how-title">Como funciona</h2>
@@ -290,9 +310,11 @@
             </div>
           </li>
         </ol>
+        </div>
       </section>
 
       <section class="panel testimonials" aria-labelledby="testimonials-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Quem já garimpa</span>
           <h2 id="testimonials-title">Mães que economizam junto</h2>
@@ -311,9 +333,11 @@
             <footer>— Fernanda, mãe de dois</footer>
           </blockquote>
         </div>
+        </div>
       </section>
 
       <section class="panel faq" id="faq" aria-labelledby="faq-title">
+        <div class="panel-shell">
         <div class="section-head reveal">
           <span class="section-label">Tire suas dúvidas</span>
           <h2 id="faq-title">Perguntas frequentes</h2>
@@ -335,6 +359,7 @@
             <summary>Com que frequência saem achadinhos?</summary>
             <p>Todo dia tem novidade; em datas como Black Friday e Dia das Mães, o fluxo aumenta muito.</p>
           </details>
+        </div>
         </div>
       </section>
 

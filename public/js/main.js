@@ -28,6 +28,26 @@ navLinks.forEach((link) => {
   });
 });
 
+const sections = document.querySelectorAll("section[id], .panel[id]");
+const navAnchors = document.querySelectorAll(".nav a[href^='#']");
+
+if (sections.length && navAnchors.length) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        navAnchors.forEach((a) => {
+          a.classList.toggle("is-active", a.getAttribute("href") === `#${id}`);
+        });
+      });
+    },
+    { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+  );
+
+  sections.forEach((sec) => navObserver.observe(sec));
+}
+
 const revealEls = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
   (entries) => {
