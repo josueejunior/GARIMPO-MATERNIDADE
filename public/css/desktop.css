@@ -1,0 +1,139 @@
+/* Layout desktop (PC) */
+
+@media (min-width: 640px) {
+  .top-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 72rem;
+    height: var(--header-h);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+    background: rgba(30, 143, 212, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+    box-sizing: border-box;
+  }
+
+  .top-bar.scrolled {
+    background: rgba(74, 21, 104, 0.92);
+    box-shadow: 0 4px 24px var(--shadow);
+  }
+
+  /* Filhos do header participam do flex da top-bar */
+  .site-header,
+  .header-inner {
+    display: contents;
+  }
+
+  .brand {
+    order: 1;
+    flex-shrink: 0;
+  }
+
+  .nav-drawer {
+    order: 2;
+    flex: 1;
+    min-width: 0;
+    position: static !important;
+    transform: none !important;
+    visibility: visible !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .header-actions--desktop {
+    order: 3;
+    flex-shrink: 0;
+    display: flex !important;
+    margin-left: 0;
+  }
+
+  .menu-toggle,
+  .nav-backdrop,
+  .nav-drawer-head,
+  .nav-close,
+  .nav-drawer-footer {
+    display: none !important;
+  }
+
+  .nav-drawer .nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem 1.1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .nav-drawer .nav a {
+    display: inline-flex !important;
+    align-items: center;
+    min-height: auto;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.95) !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 999px;
+    box-shadow: none !important;
+  }
+
+  .nav-drawer .nav a:hover,
+  .nav-drawer .nav a.is-active {
+    background: rgba(255, 255, 255, 0.22) !important;
+    color: var(--white) !important;
+  }
+
+  .nav-icon {
+    display: none !important;
+  }
+
+  .brand-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .brand-text {
+    display: inline;
+    font-size: 0.8rem;
+  }
+
+  .nav-cta {
+    display: inline-flex;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .top-bar {
+    max-width: 76rem;
+    gap: 2rem;
+  }
+
+  .nav-drawer .nav {
+    gap: 0.5rem 1.5rem;
+  }
+
+  .nav-drawer .nav a {
+    font-size: 0.95rem;
+  }
+}

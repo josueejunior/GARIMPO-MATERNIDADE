@@ -1,0 +1,185 @@
+/* Carrosséis horizontais — toque fluido no mobile */
+
+@media (max-width: 639px) {
+  .panel.deals,
+  .panel.testimonials {
+    overflow: visible;
+  }
+
+  .panel.deals .panel-shell,
+  .panel.testimonials .panel-shell {
+    overflow: visible;
+  }
+
+  .carousel-wrap {
+    position: relative;
+    margin-top: 0.35rem;
+    margin-inline: calc(-1 * clamp(0.5rem, 3vw, 1rem));
+    padding-inline: clamp(0.5rem, 3vw, 1rem);
+    padding-bottom: 0.25rem;
+  }
+
+  .carousel-wrap::before,
+  .carousel-wrap::after {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    bottom: 2.5rem;
+    width: 1.25rem;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .carousel-wrap--deals::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(74, 21, 104, 0.55), transparent);
+  }
+
+  .carousel-wrap--deals::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(74, 21, 104, 0.55), transparent);
+  }
+
+  .carousel-wrap--light::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--white), transparent);
+  }
+
+  .carousel-wrap--light::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--white), transparent);
+  }
+
+  .carousel-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    margin: 0 0 0.65rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .carousel-wrap--deals .carousel-hint {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .carousel-wrap--light .carousel-hint {
+    color: var(--purple-muted);
+  }
+
+  .carousel-hint span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .scroll-carousel.deals-track,
+  .scroll-carousel.testimonials-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    max-width: none;
+    margin: 0;
+    padding: 0.15rem 0 0.35rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: clamp(0.5rem, 3vw, 1rem);
+    touch-action: pan-x;
+    cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scroll-carousel.deals-track::-webkit-scrollbar,
+  .scroll-carousel.testimonials-grid::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .scroll-carousel.deals-track:active,
+  .scroll-carousel.testimonials-grid:active {
+    cursor: grabbing;
+  }
+
+  .scroll-carousel .deal-card,
+  .scroll-carousel .quote-card {
+    flex: 0 0 min(82vw, 17.5rem);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .scroll-carousel .quote-card {
+    flex-basis: min(86vw, 18.5rem);
+    border-radius: calc(var(--radius) + 0.25rem);
+    box-shadow:
+      0 8px 24px rgba(255, 79, 163, 0.12),
+      0 0 0 1px rgba(255, 159, 208, 0.35);
+  }
+
+  .scroll-carousel .deal-card {
+    border-radius: calc(var(--radius) + 0.2rem);
+  }
+
+  @media (hover: none) {
+    .scroll-carousel .deal-card:hover {
+      transform: none;
+    }
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+    padding-bottom: 0.15rem;
+  }
+
+  .carousel-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition:
+      width 0.25s ease,
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .carousel-wrap--light .carousel-dot {
+    background: rgba(74, 21, 104, 0.2);
+  }
+
+  .carousel-dot.is-active {
+    width: 1.35rem;
+    background: var(--gold);
+  }
+
+  .carousel-wrap--light .carousel-dot.is-active {
+    background: var(--pink-hot);
+  }
+
+  .carousel-dot:focus-visible {
+    outline: 2px solid var(--pink-hot);
+    outline-offset: 3px;
+  }
+}
+
+@media (min-width: 640px) {
+  .carousel-hint,
+  .carousel-dots {
+    display: none;
+  }
+}

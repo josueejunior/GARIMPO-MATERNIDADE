@@ -8,25 +8,67 @@ document.querySelectorAll("[data-wa]").forEach((el) => {
 document.querySelector(".footer-year").textContent =
   `© ${new Date().getFullYear()} Garimpo Maternidade`;
 
-const header = document.querySelector(".site-header");
+const topBar = document.querySelector(".top-bar");
+let savedScrollY = 0;
 const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelectorAll(".nav a, .footer-links a[href^='#']");
+const navClose = document.querySelector(".nav-close");
+const navBackdrop = document.querySelector(".nav-backdrop");
+const navDrawer = document.querySelector("#nav-drawer");
+const navLinks = document.querySelectorAll(
+  ".nav a, .footer-links a[href^='#'], .nav-drawer-cta"
+);
 
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 40);
-}, { passive: true });
+function setMenuOpen(open) {
+  document.body.classList.toggle("nav-open", open);
+  menuToggle?.setAttribute("aria-expanded", String(open));
+  navDrawer?.setAttribute("aria-hidden", String(!open));
+  navBackdrop?.setAttribute("aria-hidden", String(!open));
 
-menuToggle?.addEventListener("click", () => {
-  const open = document.body.classList.toggle("nav-open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-});
+  if (open) {
+    savedScrollY = window.scrollY;
+    document.body.style.top = `-${savedScrollY}px`;
+  } else {
+    document.body.style.top = "";
+    window.scrollTo(0, savedScrollY);
+  }
+}
+
+function closeMenu() {
+  setMenuOpen(false);
+}
+
+function openMenu() {
+  setMenuOpen(true);
+}
+
+function toggleMenu() {
+  const isOpen = document.body.classList.contains("nav-open");
+  setMenuOpen(!isOpen);
+}
+
+menuToggle?.addEventListener("click", toggleMenu);
+navClose?.addEventListener("click", closeMenu);
+navBackdrop?.addEventListener("click", closeMenu);
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    document.body.classList.remove("nav-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", closeMenu);
 });
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
+
+window.addEventListener(
+  "resize",
+  () => {
+    if (window.matchMedia("(min-width: 640px)").matches) closeMenu();
+  },
+  { passive: true }
+);
+
+window.addEventListener("scroll", () => {
+  topBar?.classList.toggle("scrolled", window.scrollY > 40);
+}, { passive: true });
 
 const sections = document.querySelectorAll("section[id], .panel[id]");
 const navAnchors = document.querySelectorAll(".nav a[href^='#']");

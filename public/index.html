@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
       content="Garimpo Maternidade — o achadinho só de maternidade. Fraldas, enxoval, roupinhas, mamadeiras e tudo para mamãe e bebê com preço de garimpo."
@@ -24,6 +24,11 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/polish.css" />
+    <link rel="stylesheet" href="/css/mobile-nav.css" />
+    <link rel="stylesheet" href="/css/fixes.css" />
+    <link rel="stylesheet" href="/css/desktop.css" />
+    <link rel="stylesheet" href="/css/modern.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
   </head>
   <body>
     <div class="cursor-fx" aria-hidden="true">
@@ -31,7 +36,8 @@
       <div class="cursor-ring"></div>
     </div>
 
-    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true">
+    <div class="bg-mesh"></div>
     <div class="sparkles" aria-hidden="true"></div>
     <div class="bg-rainbow" aria-hidden="true"></div>
     <div class="confetti" aria-hidden="true"></div>
@@ -41,27 +47,56 @@
     <div class="float-deco" aria-hidden="true">
       <span>🍼</span><span>🧸</span><span>💗</span><span>👶</span><span>🏷️</span>
     </div>
+    </div>
 
-    <header class="site-header" id="top">
+    <div class="top-bar" id="top">
+      <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="#top">
           <img class="brand-logo" src="/assets/logo.png" alt="" width="36" height="36" decoding="async" />
-          <span>garimpo maternidade</span>
+          <span class="brand-text">garimpo maternidade</span>
         </a>
-        <nav class="nav" aria-label="Principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#categorias">Produtos</a>
-          <a href="#beneficios">Por quê</a>
-          <a href="#faq">Dúvidas</a>
-        </nav>
-        <div class="header-actions">
+        <div class="header-actions header-actions--desktop">
           <a class="nav-cta" data-wa href="#">Entrar</a>
         </div>
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
-    </header>
+
+      </header>
+
+      <div class="nav-backdrop" aria-hidden="true"></div>
+
+      <aside id="nav-drawer" class="nav-drawer" aria-hidden="true" aria-label="Menu">
+        <div class="nav-drawer-head">
+          <img class="nav-drawer-logo" src="/assets/logo.png" alt="" width="48" height="48" decoding="async" />
+          <div>
+            <p class="nav-drawer-title">Garimpo Maternidade</p>
+            <p class="nav-drawer-sub">Achadinhos de maternidade</p>
+          </div>
+          <button class="nav-close" type="button" aria-label="Fechar menu">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <nav class="nav" aria-label="Principal">
+          <a href="#sobre"><span class="nav-icon" aria-hidden="true">💗</span> Sobre</a>
+          <a href="#categorias"><span class="nav-icon" aria-hidden="true">👶</span> Produtos</a>
+          <a href="#beneficios"><span class="nav-icon" aria-hidden="true">✨</span> Por quê entrar</a>
+          <a href="#como"><span class="nav-icon" aria-hidden="true">📋</span> Como funciona</a>
+          <a href="#faq"><span class="nav-icon" aria-hidden="true">❓</span> Dúvidas</a>
+        </nav>
+        <div class="nav-drawer-footer">
+          <a class="cta cta-primary nav-drawer-cta" data-wa href="#">Entrar no grupo</a>
+        </div>
+      </aside>
+    </div>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
@@ -255,7 +290,9 @@
           <h2 id="deals-title">Assim chegam os achadinhos</h2>
           <p class="section-lead">Ofertas reais do dia a dia — entre no grupo pra pegar a próxima.</p>
         </div>
-        <div class="deals-track reveal">
+        <div class="carousel-wrap carousel-wrap--deals">
+        <p class="carousel-hint" aria-hidden="true"><span>←</span> Deslize para ver mais <span>→</span></p>
+        <div class="deals-track scroll-carousel reveal" id="carousel-deals" aria-label="Exemplos de ofertas">
           <article class="deal-card">
             <span class="deal-badge">-42%</span>
             <p class="deal-cat">Higiene</p>
@@ -277,6 +314,8 @@
             <p class="deal-price"><s>R$ 899</s> <strong>R$ 629</strong></p>
             <span class="deal-note">Parcelado sem juros</span>
           </article>
+        </div>
+        <div class="carousel-dots" data-dots-for="carousel-deals" role="tablist" aria-label="Navegação ofertas"></div>
         </div>
         </div>
       </section>
@@ -319,7 +358,11 @@
           <span class="section-label">Quem já garimpa</span>
           <h2 id="testimonials-title">Mães que economizam junto</h2>
         </div>
-        <div class="testimonials-grid reveal">
+        <div class="carousel-wrap carousel-wrap--light">
+        <p class="carousel-hint" aria-hidden="true">
+          <span>←</span> Deslize para ver mais <span>→</span>
+        </p>
+        <div class="testimonials-grid scroll-carousel reveal" id="carousel-testimonials" aria-label="Depoimentos">
           <blockquote class="quote-card">
             <p>“Montei metade do enxoval pelo grupo. Sempre tem fralda e body em promo.”</p>
             <footer>— Camila, mamãe de primeira viagem</footer>
@@ -332,6 +375,8 @@
             <p>“As ofertas relâmpago valem ouro. Já peguei carrinho com descontão.”</p>
             <footer>— Fernanda, mãe de dois</footer>
           </blockquote>
+        </div>
+        <div class="carousel-dots" data-dots-for="carousel-testimonials" role="tablist" aria-label="Navegação depoimentos"></div>
         </div>
         </div>
       </section>
@@ -410,5 +455,6 @@
 
     <script src="/js/cursor.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/carousel.js"></script>
   </body>
 </html>
