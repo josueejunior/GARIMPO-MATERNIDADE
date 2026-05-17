@@ -5,137 +5,385 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Garimpo Maternidade — o achadinho só de maternidade. Encontre fraldas, enxoval, roupinhas, mamadeiras e tudo para mamãe e bebê."
+      content="Garimpo Maternidade — o achadinho só de maternidade. Fraldas, enxoval, roupinhas, mamadeiras e tudo para mamãe e bebê com preço de garimpo."
     />
     <meta property="og:title" content="Garimpo Maternidade" />
     <meta
       property="og:description"
-      content="Seu cantinho de achadinhos exclusivos para maternidade."
+      content="Seu cantinho de achadinhos exclusivos para maternidade. Entre no grupo e economize!"
     />
     <meta property="og:image" content="/assets/logo.png" />
+    <meta property="og:type" content="website" />
     <title>Garimpo Maternidade — Achadinhos de Maternidade</title>
     <link rel="icon" href="/assets/logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="sparkles" aria-hidden="true"></div>
+    <div class="cursor-fx" aria-hidden="true">
+      <div class="cursor-dot"></div>
+      <div class="cursor-ring"></div>
+    </div>
 
-    <header class="top-bar">
-      <a
-        class="brand-mini"
-        href="https://urjzikyckegvjzuskahg.supabase.co/functions/v1/link-preview/mari01"
-        target="_blank"
-        rel="noopener noreferrer"
-        >garimpo maternidade</a
-      >
-      <span class="host-badge" title="Hospedagem">Vercel</span>
+    <div class="bg-mesh" aria-hidden="true"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="bg-rainbow" aria-hidden="true"></div>
+    <div class="confetti" aria-hidden="true"></div>
+    <div class="bubbles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="float-deco" aria-hidden="true">
+      <span>🍼</span><span>🧸</span><span>💗</span><span>👶</span><span>🏷️</span>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="brand-mini" href="#top">garimpo maternidade</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#categorias">Produtos</a>
+          <a href="#beneficios">Por quê</a>
+          <a href="#faq">Dúvidas</a>
+        </nav>
+        <div class="header-actions">
+          <a class="nav-cta" data-wa href="#">Entrar</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-glow" aria-hidden="true"></div>
-        <img
-          class="logo"
-          src="/assets/logo.png"
-          alt="Garimpo Maternidade — achadinhos de maternidade"
-          width="520"
-          height="auto"
-        />
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-badge" aria-hidden="true">
+          <span class="pulse-dot"></span>
+          Grupo ativo · Ofertas todo dia
+        </div>
+        <div class="hero-visual">
+          <div class="hero-ring hero-ring--outer" aria-hidden="true"></div>
+          <div class="hero-ring hero-ring--inner" aria-hidden="true"></div>
+          <div class="logo-glow" aria-hidden="true"></div>
+          <img
+            class="logo"
+            src="/assets/logo.png"
+            alt="Garimpo Maternidade — achadinhos de maternidade"
+            width="520"
+            height="auto"
+            decoding="async"
+          />
+        </div>
+        <h1 id="hero-title" class="sr-only">Garimpo Maternidade</h1>
         <p class="tagline">
-          O <strong>achadinho</strong> feito só pra quem está na jornada da
-          <strong>maternidade</strong>.
+          O <strong>achadinho</strong> feito só pra quem vive a jornada da
+          <strong>maternidade</strong>
         </p>
         <p class="subtitle">
-          Aqui você encontra <em>tudo</em>: fraldas, enxoval, body, mamadeira,
-          carrinho, berço, itens pra mamãe e muito mais — sempre com preço de
-          garimpo.
+          Fraldas, enxoval, body, mamadeira, carrinho, berço, itens pra mamãe e
+          muito mais — curados com carinho e sempre no precinho de garimpo.
         </p>
-        <a
-          class="cta"
-          href="https://urjzikyckegvjzuskahg.supabase.co/functions/v1/link-preview/mari01"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="cta-icon" aria-hidden="true">💬</span>
-          Entrar no grupo de ofertas
-        </a>
+        <div class="hero-cta-row">
+          <a class="cta cta-primary" data-wa href="#">
+            <svg class="cta-svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.882 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Entrar no grupo de ofertas
+          </a>
+          <a class="cta cta-ghost" href="#categorias">Ver categorias</a>
+        </div>
+        <ul class="hero-stats" aria-label="Destaques">
+          <li><strong>100%</strong><span>Maternidade</span></li>
+          <li><strong>24h</strong><span>Achadinhos</span></li>
+          <li><strong>$$</strong><span>Economia</span></li>
+        </ul>
       </section>
 
-      <section class="categories" aria-labelledby="cats-title">
-        <h2 id="cats-title">O que você vai garimpar por aqui</h2>
-        <ul class="grid">
-          <li class="card">
-            <span class="card-emoji" aria-hidden="true">🍼</span>
-            <h3>Alimentação</h3>
-            <p>Mamadeiras, bicos, esterilizadores e papinhas.</p>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+          <path d="M0,40 C360,90 720,0 1080,50 C1260,70 1380,60 1440,45 L1440,80 L0,80 Z" fill="var(--cream)"/>
+        </svg>
+      </div>
+
+      <section class="panel about" id="sobre" aria-labelledby="about-title">
+        <div class="section-head reveal">
+          <span class="section-label">Sobre o achadinho</span>
+          <h2 id="about-title">Um garimpo só seu, de mãe pra mãe</h2>
+          <p class="section-lead">
+            O <strong>Garimpo Maternidade</strong> nasceu pra quem não tem tempo de
+            ficar horas caçando promoção — mas não abre mão de qualidade e preço justo
+            na hora de montar o enxoval, repor fralda ou se mimar na gestação.
+          </p>
+        </div>
+        <div class="about-grid reveal">
+          <article class="about-card">
+            <span class="about-icon" aria-hidden="true">🔍</span>
+            <h3>Curadoria de verdade</h3>
+            <p>Só entra o que faz sentido: marcas confiáveis, cupom bom e link que funciona.</p>
+          </article>
+          <article class="about-card">
+            <span class="about-icon" aria-hidden="true">💗</span>
+            <h3>Foco total em bebê</h3>
+            <p>Sem misturar com eletrônico, moda adulta ou coisa aleatória — aqui é maternidade.</p>
+          </article>
+          <article class="about-card">
+            <span class="about-icon" aria-hidden="true">⚡</span>
+            <h3>Oferta na hora</h3>
+            <p>Promo relâmpago, estoque acabando e cupom limitado — você vê e garimpa na hora.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel benefits" id="beneficios" aria-labelledby="benefits-title">
+        <div class="section-head reveal">
+          <span class="section-label">Por que entrar</span>
+          <h2 id="benefits-title">Você economiza sem perder a cabeça</h2>
+        </div>
+        <ul class="benefits-list reveal">
+          <li>
+            <span class="benefit-num">01</span>
+            <div>
+              <h3>Lista pronta</h3>
+              <p>Enxoval, chá de bebê, volta às aulas do bebê — achadinhos por fase da vida.</p>
+            </div>
           </li>
-          <li class="card">
-            <span class="card-emoji" aria-hidden="true">👶</span>
-            <h3>Roupinhas</h3>
-            <p>Bodies, macacões, kits recém-nascido e enxoval.</p>
+          <li>
+            <span class="benefit-num">02</span>
+            <div>
+              <h3>Preço que cabe</h3>
+              <p>De outlet a marketplace, sempre buscando o menor valor do momento.</p>
+            </div>
           </li>
-          <li class="card">
-            <span class="card-emoji" aria-hidden="true">🧸</span>
-            <h3>Conforto</h3>
-            <p>Fraldas, lenços, banho, sono e passeio.</p>
+          <li>
+            <span class="benefit-num">03</span>
+            <div>
+              <h3>Comunidade</h3>
+              <p>Mães, gestantes e famílias trocando dica de produto que realmente vale.</p>
+            </div>
           </li>
-          <li class="card">
-            <span class="card-emoji" aria-hidden="true">🤰</span>
-            <h3>Pra mamãe</h3>
-            <p>Amamentação, gestação e pós-parto com desconto.</p>
-          </li>
-          <li class="card">
-            <span class="card-emoji" aria-hidden="true">🏠</span>
-            <h3>Casa &amp; quarto</h3>
-            <p>Berço, decoração, organização e segurança.</p>
-          </li>
-          <li class="card">
-            <span class="card-emoji" aria-hidden="true">🏷️</span>
-            <h3>Ofertas relâmpago</h3>
-            <p>Promoções que somem rápido — fica de olho no grupo!</p>
+          <li>
+            <span class="benefit-num">04</span>
+            <div>
+              <h3>Zero enrolação</h3>
+              <p>Link direto, foto do produto e valor na cara — sem clickbait.</p>
+            </div>
           </li>
         </ul>
       </section>
 
-      <section class="how" aria-labelledby="how-title">
-        <h2 id="how-title">Como funciona</h2>
-        <ol class="steps">
+      <section class="panel categories" id="categorias" aria-labelledby="cats-title">
+        <div class="section-head reveal">
+          <span class="section-label">Catálogo do garimpo</span>
+          <h2 id="cats-title">Todo tipo de produto de maternidade</h2>
+          <p class="section-lead">Se existe no enxoval, no quarto do bebê ou na bolsa da mamãe, a gente garimpa.</p>
+        </div>
+        <ul class="grid reveal">
+          <li class="card card--sky" style="--delay: 0">
+            <span class="card-emoji" aria-hidden="true">🍼</span>
+            <h3>Alimentação</h3>
+            <p>Mamadeiras, bicos, mamadeiras anti-cólica, esterilizadores, pratos e papinhas.</p>
+          </li>
+          <li class="card card--pink" style="--delay: 1">
+            <span class="card-emoji" aria-hidden="true">👶</span>
+            <h3>Roupinhas</h3>
+            <p>Bodies, macacões, kit RN, meias, toucas e looks pra foto.</p>
+          </li>
+          <li class="card card--mint" style="--delay: 2">
+            <span class="card-emoji" aria-hidden="true">🧷</span>
+            <h3>Higiene</h3>
+            <p>Fraldas, lenços, pomadas, banho, pomada e cuidados diários.</p>
+          </li>
+          <li class="card card--lavender" style="--delay: 3">
+            <span class="card-emoji" aria-hidden="true">🛏️</span>
+            <h3>Sono</h3>
+            <p>Berço, colchão, lençol, mobile, nano e travesseiros seguros.</p>
+          </li>
+          <li class="card card--peach" style="--delay: 4">
+            <span class="card-emoji" aria-hidden="true">🚗</span>
+            <h3>Passeio</h3>
+            <p>Carrinho, bebê conforto, sling, mochila e acessórios de viagem.</p>
+          </li>
+          <li class="card card--rose" style="--delay: 5">
+            <span class="card-emoji" aria-hidden="true">🤰</span>
+            <h3>Pra mamãe</h3>
+            <p>Amamentação, gestação, pós-parto, absorvente e conforto.</p>
+          </li>
+          <li class="card card--lemon" style="--delay: 6">
+            <span class="card-emoji" aria-hidden="true">🧸</span>
+            <h3>Brinquedos</h3>
+            <p>Mordedores, pelúcias, tapete de atividades e estimulação.</p>
+          </li>
+          <li class="card card--aqua" style="--delay: 7">
+            <span class="card-emoji" aria-hidden="true">🏠</span>
+            <h3>Casa &amp; quarto</h3>
+            <p>Decoração, organização, monitor e itens de segurança.</p>
+          </li>
+          <li class="card card-highlight" style="--delay: 8">
+            <span class="card-tag">OFERTA</span>
+            <span class="card-emoji" aria-hidden="true">🏷️</span>
+            <h3>Relâmpago</h3>
+            <p>Promoções que somem em minutos — ative as notificações do grupo!</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel deals" aria-labelledby="deals-title">
+        <div class="section-head reveal">
+          <span class="section-label">Exemplos do grupo</span>
+          <h2 id="deals-title">Assim chegam os achadinhos</h2>
+          <p class="section-lead">Ofertas reais do dia a dia — entre no grupo pra pegar a próxima.</p>
+        </div>
+        <div class="deals-track reveal">
+          <article class="deal-card">
+            <span class="deal-badge">-42%</span>
+            <p class="deal-cat">Higiene</p>
+            <h3>Kit fraldas + lenço</h3>
+            <p class="deal-price"><s>R$ 189</s> <strong>R$ 109</strong></p>
+            <span class="deal-note">Cupom + frete grátis</span>
+          </article>
+          <article class="deal-card">
+            <span class="deal-badge hot">Relâmpago</span>
+            <p class="deal-cat">Enxoval</p>
+            <h3>Body RN 6 peças</h3>
+            <p class="deal-price"><s>R$ 79</s> <strong>R$ 39</strong></p>
+            <span class="deal-note">Últimas unidades</span>
+          </article>
+          <article class="deal-card">
+            <span class="deal-badge">-30%</span>
+            <p class="deal-cat">Passeio</p>
+            <h3>Cadeirinha grupo 0+</h3>
+            <p class="deal-price"><s>R$ 899</s> <strong>R$ 629</strong></p>
+            <span class="deal-note">Parcelado sem juros</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel how" id="como" aria-labelledby="how-title">
+        <div class="section-head reveal">
+          <span class="section-label">Passo a passo</span>
+          <h2 id="how-title">Como funciona</h2>
+        </div>
+        <ol class="timeline reveal">
           <li>
-            <span class="step-num">1</span>
-            Entre no grupo pelo botão acima.
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h3>Entre no grupo</h3>
+              <p>Um clique no botão verde e você já faz parte do Garimpo Maternidade.</p>
+            </div>
           </li>
           <li>
-            <span class="step-num">2</span>
-            Receba achadinhos curados só de maternidade.
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h3>Receba os achadinhos</h3>
+              <p>Links, fotos e preços de produtos curados só pra maternidade.</p>
+            </div>
           </li>
           <li>
-            <span class="step-num">3</span>
-            Garimpe a oferta e economize na hora certa.
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <h3>Garimpe e economize</h3>
+              <p>Abra a oferta, aplique o cupom se tiver e feche antes que acabe.</p>
+            </div>
           </li>
         </ol>
       </section>
+
+      <section class="panel testimonials" aria-labelledby="testimonials-title">
+        <div class="section-head reveal">
+          <span class="section-label">Quem já garimpa</span>
+          <h2 id="testimonials-title">Mães que economizam junto</h2>
+        </div>
+        <div class="testimonials-grid reveal">
+          <blockquote class="quote-card">
+            <p>“Montei metade do enxoval pelo grupo. Sempre tem fralda e body em promo.”</p>
+            <footer>— Camila, mamãe de primeira viagem</footer>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>“Não preciso mais abrir dez apps. O achadinho chega pronto no WhatsApp.”</p>
+            <footer>— Juliana, gestante</footer>
+          </blockquote>
+          <blockquote class="quote-card">
+            <p>“As ofertas relâmpago valem ouro. Já peguei carrinho com descontão.”</p>
+            <footer>— Fernanda, mãe de dois</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="panel faq" id="faq" aria-labelledby="faq-title">
+        <div class="section-head reveal">
+          <span class="section-label">Tire suas dúvidas</span>
+          <h2 id="faq-title">Perguntas frequentes</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>O grupo é gratuito?</summary>
+            <p>Sim! Entrar no Garimpo Maternidade não custa nada — só o WhatsApp no celular.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Que tipo de oferta vocês postam?</summary>
+            <p>Promoções de lojas online, marketplaces e cupons — sempre ligados a bebê, gestação e maternidade.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Preciso comprar por algum link específico?</summary>
+            <p>Enviamos o link da loja ou do cupom. Você compra direto no site oficial do vendedor.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Com que frequência saem achadinhos?</summary>
+            <p>Todo dia tem novidade; em datas como Black Friday e Dia das Mães, o fluxo aumenta muito.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta-banner reveal" aria-labelledby="cta-banner-title">
+        <div class="cta-banner-inner">
+          <h2 id="cta-banner-title">Pronta pra garimpar?</h2>
+          <p>Junte-se às mães que não deixam escapar nenhum achadinho de maternidade.</p>
+          <a class="cta cta-primary cta-large" data-wa href="#">
+            <svg class="cta-svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.882 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Quero entrar no grupo
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a
-        class="footer-link"
-        href="https://urjzikyckegvjzuskahg.supabase.co/functions/v1/link-preview/mari01"
-        target="_blank"
-        rel="noopener noreferrer"
-        >garimpo maternidade</a
-      >
-      <span class="footer-sep">·</span>
-      <span>Hospedado na <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></span>
-      <span class="footer-sep">·</span>
-      <span class="footer-year"></span>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/logo.png" alt="" width="120" height="auto" loading="lazy" />
+          <p>O achadinho que entende a rotina de quem está grávida, amamentando ou criando.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Navegação</h3>
+          <a href="#sobre">Sobre</a>
+          <a href="#categorias">Produtos</a>
+          <a href="#beneficios">Por quê entrar</a>
+          <a href="#faq">Dúvidas</a>
+        </div>
+        <div class="footer-links">
+          <h3>Grupo</h3>
+          <a data-wa href="#">WhatsApp — Garimpo Maternidade</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a class="footer-link" href="#top">garimpo maternidade</a>
+        <span class="footer-sep">·</span>
+        <span class="footer-year"></span>
+      </div>
     </footer>
 
+    <a class="float-wa" data-wa href="#" aria-label="Entrar no grupo WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.882 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+
+    <script src="/js/cursor.js"></script>
     <script src="/js/main.js"></script>
   </body>
 </html>
