@@ -449,7 +449,9 @@ main {
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 8px 0 rgba(74, 21, 104, 0.15))
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  filter: drop-shadow(0 8px 0 rgba(74, 21, 104, 0.12))
     drop-shadow(0 20px 40px var(--shadow-lg));
   animation: float 5s ease-in-out infinite;
 }
