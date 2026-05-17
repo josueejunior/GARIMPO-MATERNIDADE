@@ -204,10 +204,7 @@
     box-shadow: 0 2px 12px rgba(255, 79, 163, 0.15);
   }
 
-  .nav-icon {
-    font-size: 1.25rem;
-    width: 1.75rem;
-    text-align: center;
+  .nav-drawer .nav .ui-icon--nav {
     flex-shrink: 0;
   }
 

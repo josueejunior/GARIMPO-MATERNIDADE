@@ -3,6 +3,8 @@ const WA_URL =
 
 document.querySelectorAll("[data-wa]").forEach((el) => {
   el.href = WA_URL;
+  el.target = "_blank";
+  el.rel = "noopener noreferrer";
 });
 
 document.querySelector(".footer-year").textContent =

@@ -1,0 +1,137 @@
+/* Ícones SVG — sem caixa branca, cor integrada ao layout */
+
+.ui-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--pink-hot);
+  line-height: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ui-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ui-icon--nav {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--pink-hot);
+}
+
+.nav-drawer .nav a.is-active .ui-icon--nav {
+  color: var(--pink-hot);
+}
+
+.ui-icon--stat {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: 0.2rem;
+  color: var(--pink-hot);
+  filter: drop-shadow(0 2px 6px rgba(255, 79, 163, 0.2));
+}
+
+.ui-icon--about {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--pink-hot);
+  filter: drop-shadow(0 3px 10px rgba(255, 79, 163, 0.22));
+}
+
+.ui-icon--card {
+  width: 2.1rem;
+  height: 2.1rem;
+  margin: 0 auto 0.45rem;
+  border-radius: 50%;
+  color: var(--purple);
+}
+
+.card--sky .ui-icon--card {
+  color: #1680be;
+  background: rgba(94, 196, 255, 0.22);
+}
+
+.card--pink .ui-icon--card {
+  color: #d4147a;
+  background: rgba(255, 142, 200, 0.25);
+}
+
+.card--mint .ui-icon--card {
+  color: #1f8f72;
+  background: rgba(125, 255, 184, 0.28);
+}
+
+.card--lavender .ui-icon--card {
+  color: #7b3fc9;
+  background: rgba(199, 125, 255, 0.22);
+}
+
+.card--peach .ui-icon--card {
+  color: #c45a20;
+  background: rgba(255, 180, 140, 0.3);
+}
+
+.card--rose .ui-icon--card {
+  color: #c4186e;
+  background: rgba(255, 107, 203, 0.22);
+}
+
+.card--lemon .ui-icon--card {
+  color: #a67c00;
+  background: rgba(255, 220, 80, 0.35);
+}
+
+.card--aqua .ui-icon--card {
+  color: #2a8fc4;
+  background: rgba(100, 220, 220, 0.28);
+}
+
+.card-highlight .ui-icon--card {
+  color: var(--pink-hot);
+  background: rgba(255, 79, 163, 0.18);
+}
+
+.float-deco .ui-icon--deco {
+  width: clamp(1.35rem, 3vw, 2rem);
+  height: clamp(1.35rem, 3vw, 2rem);
+  color: var(--pink-hot);
+}
+
+.ui-icon--trust {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-right: 0.25rem;
+  color: var(--pink-hot);
+}
+
+.trust-strip span {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .float-deco .ui-icon--deco {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .ui-icon--about {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .ui-icon--card {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}

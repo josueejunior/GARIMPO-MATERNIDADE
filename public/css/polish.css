@@ -176,9 +176,8 @@ body {
   padding: 0.85rem 0.65rem;
 }
 
-.hero-stats .stat-icon {
-  font-size: 1.35rem;
-  line-height: 1;
+.hero-stats .ui-icon--stat {
+  margin-bottom: 0.2rem;
 }
 
 .hero-stats strong {
